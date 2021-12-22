@@ -1,0 +1,56 @@
+{
+  "name": "random-keyword-code",
+  "version": "3.3.0",
+  "description": "랜덤 키워드 원본",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nihilapp/random-keyword-code.git"
+  },
+  "bugs": {
+    "url": "https://github.com/nihilapp/random-keyword-code/issues"
+  },
+  "homepage": "https://github.com/nihilapp/random-keyword-code#readme",
+  "scripts": {
+    "remove": "rm -rf node_modules/.cache && rm -rf build/",
+    "serve": "yarn run remove && next dev",
+    "start": "yarn run remove && next build && next start",
+    "build": "yarn run remove && next build",
+    "backupgit": "mv ../io/.git ../backup",
+    "restoregit": "mv ../backup/.git ../io",
+    "export": "yarn run backupgit && yarn run remove && next build && next export -o ../io/ && yarn run restoregit"
+  },
+  "keywords": [],
+  "author": "NIHILncunia",
+  "license": "MIT",
+  "dependencies": {
+    "@emotion/react": "^11.7.1",
+    "@emotion/styled": "^11.6.0",
+    "axios": "^0.24.0",
+    "next": "^12.0.7",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-icons": "^4.3.1",
+    "uuid": "^8.3.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.16.5",
+    "@emotion/babel-plugin": "^11.7.1",
+    "@emotion/babel-preset-css-prop": "^11.2.0",
+    "@types/node": "^17.0.1",
+    "@types/react": "^17.0.37",
+    "@types/react-dom": "^17.0.11",
+    "@types/uuid": "^8.3.3",
+    "@typescript-eslint/eslint-plugin": "^5.7.0",
+    "@typescript-eslint/parser": "^5.7.0",
+    "eslint": "^8.4.1",
+    "eslint-config-airbnb": "^19.0.2",
+    "eslint-config-next": "^12.0.7",
+    "eslint-plugin-html": "^6.2.0",
+    "eslint-plugin-import": "^2.25.3",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-react": "^7.27.1",
+    "eslint-plugin-react-hooks": "^4.3.0",
+    "typescript": "^4.5.4"
+  }
+}
