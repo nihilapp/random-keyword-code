@@ -16,9 +16,9 @@
     "serve": "yarn run remove && next dev",
     "start": "yarn run remove && next build && next start",
     "build": "yarn run remove && next build",
-    "backupgit": "mv ../io/.git ../backup",
-    "restoregit": "mv ../backup/.git ../io",
-    "export": "yarn run backupgit && yarn run remove && next build && next export -o ../io/ && yarn run restoregit"
+    "backupgit": "mv ../keyword/.git ../backup",
+    "restoregit": "mv ../backup/.git ../keyword",
+    "export": "yarn run backupgit && yarn run remove && next build && next export -o ../keyword/ && yarn run restoregit"
   },
   "keywords": [],
   "author": "NIHILncunia",
