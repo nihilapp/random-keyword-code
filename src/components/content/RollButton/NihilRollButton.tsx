@@ -12,7 +12,7 @@ interface IRollButton {
   type?: ('orga' | 'area' | 'story');
 }
 
-export const NihilRollButton = ({
+export const NihilRollButton = React.memo(({
   children, words, setState, type,
 }: IRollButton) => {
   const pickWord = useCallback(() => {
@@ -208,4 +208,6 @@ export const NihilRollButton = ({
       <button css={NihilRollButtonStyle} type='button' onClick={pickWord}>{children}</button>
     </>
   );
-};
+});
+
+NihilRollButton.displayName = 'NihilRollButton';

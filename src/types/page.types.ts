@@ -40,13 +40,48 @@ export interface ICharacterPage {
   words: ICharacterWords;
 }
 
-export interface IOtherwords {
+export interface IOtherWords {
   constellations: string[];
   arcanaMajor: string[];
   arcanaMinor: IOtherMinor[];
   playingCard: string[];
+  gemStone: string[];
+  creature: string[];
 }
 
 export interface IOtherPage {
-  words: IOtherwords;
+  words: IOtherWords;
+}
+
+export interface IRandomWords {
+  randomBase: string[];
+  randomCreature: string[];
+  randomBreast: string[];
+  randomRace: string[];
+  randomSin: string[];
+  randomConstellation: string[];
+  randomTool: string[];
+  randomTableWare: string[];
+  randomAstronomy: string[];
+  randomFruit: string[];
+  randomVegetable: string[];
+  randomWeather: string[];
+  randomClass: string[];
+  randomCharacterType: string[];
+  randomMetal: string[];
+  randomFigure: string[];
+  randomBody: string[];
+  randomStatus: string[];
+  randomNobility: string[];
+  randomWeapon: string[];
+  randomGenre: string[];
+  randomFeature: string[];
+  randomGem: string[];
+  randomFashion: string[];
+  randomRole: string[];
+  randomLength: number;
+}
+
+export interface IRandomPage {
+  words: IRandomWords;
 }

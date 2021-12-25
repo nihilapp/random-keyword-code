@@ -3,16 +3,16 @@ import { css } from '@emotion/react';
 import { v4 as uuid } from 'uuid';
 import { getWord } from '@/utils/words/front';
 import { sizeData } from '@/data';
-import { IOtherMinor, IOtherwords } from '@/types';
+import { IOtherMinor, IOtherWords } from '@/types';
 
 interface IRollButton {
   children: React.ReactNode;
-  words?: IOtherwords;
+  words?: IOtherWords;
   setState?: React.Dispatch<React.ReactElement[]>;
   type?: ('minor' | 'major' | 'playing');
 }
 
-export const OtherRollButton = ({
+export const OtherRollButton = React.memo(({
   children, words, setState, type,
 }: IRollButton) => {
   const pickWord = useCallback(() => {
@@ -114,4 +114,6 @@ export const OtherRollButton = ({
       <button css={OtherRollButtonStyle} type='button' onClick={pickWord}>{children}</button>
     </>
   );
-};
+});
+
+OtherRollButton.displayName = 'OtherRollButton';

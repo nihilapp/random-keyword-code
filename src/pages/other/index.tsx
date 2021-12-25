@@ -34,6 +34,14 @@ const OtherPage = ({ words, }: IOtherPage) => {
               별자리 ({words.constellations.length}개)
             </RollButton>
 
+            <RollButton words={words.creature} setState={setWord}>
+              환상종 ({words.creature.length}개)
+            </RollButton>
+
+            <RollButton words={words.gemStone} setState={setWord}>
+              보석/암석 ({words.gemStone.length}개)
+            </RollButton>
+
             <OtherRollButton words={words} setState={setWord} type='major'>
               메이저 아르카나 ({words.arcanaMajor.length}개)
             </OtherRollButton>
@@ -66,6 +74,8 @@ export const getStaticProps: GetStaticProps = async () => {
   const arcanaMajor = getWordList('other', 'arcana_major') as string[];
   const arcanaMinor = getWordJson('other', 'arcana_minor', 'minor') as IOtherMinor[];
   const playingCard = getWordList('other', 'playing_card') as string[];
+  const gemStone = getWordList('other', 'gem') as string[];
+  const creature = getWordList('random', 'creature') as string[];
 
   return {
     props: {
@@ -74,6 +84,8 @@ export const getStaticProps: GetStaticProps = async () => {
         arcanaMajor,
         arcanaMinor,
         playingCard,
+        gemStone,
+        creature,
       },
     },
   };

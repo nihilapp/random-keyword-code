@@ -4,7 +4,7 @@ import { v4 as uuid } from 'uuid';
 import { LinkBlock } from './LinkBlock';
 import { pathList } from '@/data/path.data';
 
-export const NavBlock = () => {
+export const NavBlock = React.memo(() => {
   const NavBlockStyle = css({
     marginTop: '26px',
   });
@@ -18,4 +18,6 @@ export const NavBlock = () => {
       </nav>
     </>
   );
-};
+});
+
+NavBlock.displayName = 'NavBlock';

@@ -9,7 +9,7 @@ interface ILinkBlock {
   children: React.ReactNode;
 }
 
-export const LinkBlock = ({ href, children, }: ILinkBlock) => {
+export const LinkBlock = React.memo(({ href, children, }: ILinkBlock) => {
   const [ className, setClassName, ] = useState('');
   const router = useRouter();
 
@@ -67,4 +67,6 @@ export const LinkBlock = ({ href, children, }: ILinkBlock) => {
       </Link>
     </>
   );
-};
+});
+
+LinkBlock.displayName = 'LinkBlock';

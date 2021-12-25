@@ -11,7 +11,7 @@ interface IBox {
   align?: ('center' | 'left' | 'right' | 'justify')
 }
 
-export const Box = ({
+export const Box = React.memo(({
   children, mt = 10, mb = 10, pt = 10, pb = 10, pl = 10, align = 'left',
 }: IBox) => {
   const BoxStyle = css({
@@ -29,4 +29,6 @@ export const Box = ({
       <div css={BoxStyle}>{children}</div>
     </>
   );
-};
+});
+
+Box.displayName = 'Box';

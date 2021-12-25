@@ -1,25 +1,32 @@
 import React, { useCallback } from 'react';
 import { css } from '@emotion/react';
 import { v4 as uuid } from 'uuid';
-import { getWord } from '@/utils/words/front';
+import { getColor, getWord } from '@/utils/words/front';
 import { sizeData } from '@/data';
+import { ColorBlock } from '@/components/content';
 
 interface IRollButton {
   children: React.ReactNode;
-  words?: string[];
   setState?: React.Dispatch<React.ReactElement[]>;
+  number?: number;
 }
 
-export const RollButton = React.memo(({
-  children, words, setState,
+export const ColorRollButton = React.memo(({
+  children, setState, number = 1,
 }: IRollButton) => {
   const pickWord = useCallback(() => {
-    const word = getWord(1, words, 'normal') as string[];
+    const colors: string[] = [];
+
+    for (let i = 0; i < number; i++) {
+      const color = getColor();
+
+      colors.push(color);
+    }
 
     const state = [ (
       <p key={uuid()}>
-        {word.map((item) => (
-          <span key={uuid()} className='blue keyword'>{item}</span>
+        {colors.map((item) => (
+          <ColorBlock key={uuid()} hex={item} />
         ))}
       </p>
     ), ];
@@ -27,7 +34,7 @@ export const RollButton = React.memo(({
     setState(state);
   }, []);
 
-  const RollButtonStyle = css({
+  const ColorRollButtonStyle = css({
     letterSpacing: '-1px',
     border: 'none',
     lineHeight: '1',
@@ -60,9 +67,9 @@ export const RollButton = React.memo(({
 
   return (
     <>
-      <button css={RollButtonStyle} type='button' onClick={pickWord}>{children}</button>
+      <button css={ColorRollButtonStyle} type='button' onClick={pickWord}>{children}</button>
     </>
   );
 });
 
-RollButton.displayName = 'RollButton';
+ColorRollButton.displayName = 'ColorRollButton';

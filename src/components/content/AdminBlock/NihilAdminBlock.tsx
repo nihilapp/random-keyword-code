@@ -27,7 +27,7 @@ export const NihilAdminBlock = () => {
   const [ whereMessage, setWhereMessage, ] = useState('');
 
   const onClickRace = useCallback(async () => {
-    const req = await axios.post('http://localhost:3000/api/words/create/normal', {
+    const req = await axios.post('http://localhost:3000/keyword/api/words/create/normal', {
       category: 'nihil',
       file: 'race',
       word: raceRef.current.value,
@@ -38,7 +38,7 @@ export const NihilAdminBlock = () => {
   }, []);
 
   const onClickClass = useCallback(async () => {
-    const req = await axios.post('http://localhost:3000/api/words/create/normal', {
+    const req = await axios.post('http://localhost:3000/keyword/api/words/create/normal', {
       category: 'nihil',
       file: 'class',
       word: classRef.current.value,
@@ -49,7 +49,7 @@ export const NihilAdminBlock = () => {
   }, []);
 
   const onClickOrga = useCallback(async () => {
-    const req = await axios.post('http://localhost:3000/api/words/create/orga', {
+    const req = await axios.post('http://localhost:3000/keyword/api/words/create/orga', {
       category: 'nihil',
       file: 'organization',
       word: {
@@ -64,7 +64,7 @@ export const NihilAdminBlock = () => {
   }, []);
 
   const onClickArea = useCallback(async () => {
-    const req = await axios.post('http://localhost:3000/api/words/create/area', {
+    const req = await axios.post('http://localhost:3000/keyword/api/words/create/area', {
       category: 'nihil',
       file: 'area',
       word: {
@@ -79,7 +79,7 @@ export const NihilAdminBlock = () => {
   }, []);
 
   const onClickPurpose = useCallback(async () => {
-    const req = await axios.post('http://localhost:3000/api/words/create/normal', {
+    const req = await axios.post('http://localhost:3000/keyword/api/words/create/normal', {
       category: 'nihil',
       file: 'purpose_nihil',
       word: purposeRef.current.value,
@@ -90,7 +90,7 @@ export const NihilAdminBlock = () => {
   }, []);
 
   const onClickWhere = useCallback(async () => {
-    const req = await axios.post('http://localhost:3000/api/words/create/normal', {
+    const req = await axios.post('http://localhost:3000/keyword/api/words/create/normal', {
       category: 'nihil',
       file: 'where_nihil',
       word: whereRef.current.value,
@@ -102,19 +102,19 @@ export const NihilAdminBlock = () => {
 
   return (
     <>
-      <Box mb={30}>
-        <BoxHeader mb={20}>니힐 전용</BoxHeader>
+      <Box mb={200}>
+        <BoxHeader mb={20} align='center'>니힐 전용</BoxHeader>
 
-        <AdminBlockHeader>종족</AdminBlockHeader>
+        <AdminBlockHeader>니힐 종족</AdminBlockHeader>
         <Border>
-          <AdminInput holder='종족' inputRef={raceRef} />
+          <AdminInput holder='니힐 종족' inputRef={raceRef} />
           <AdminButton create={onClickRace} />
           <AdminMessage message={raceMessage} />
         </Border>
 
-        <AdminBlockHeader>클래스</AdminBlockHeader>
+        <AdminBlockHeader>니힐 클래스</AdminBlockHeader>
         <Border>
-          <AdminInput holder='클래스' inputRef={classRef} />
+          <AdminInput holder='니힐 클래스' inputRef={classRef} />
           <AdminButton create={onClickClass} />
           <AdminMessage message={classMessage} />
         </Border>
@@ -135,16 +135,14 @@ export const NihilAdminBlock = () => {
           <AdminMessage message={areaMessage} />
         </Border>
 
-        <AdminBlockHeader>목적</AdminBlockHeader>
-        <Border>
+        <AdminBlockHeader>배경 스토리</AdminBlockHeader>
+        <Border mb={10}>
           <AdminInput holder='목적' inputRef={purposeRef} />
           <AdminButton create={onClickPurpose} />
           <AdminMessage message={purposeMessage} />
         </Border>
-
-        <AdminBlockHeader>출발지</AdminBlockHeader>
         <Border>
-          <AdminInput holder='출발지' inputRef={whereRef} />
+          <AdminInput holder='장소' inputRef={whereRef} />
           <AdminButton create={onClickWhere} />
           <AdminMessage message={whereMessage} />
         </Border>

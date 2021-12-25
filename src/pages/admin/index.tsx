@@ -2,7 +2,9 @@ import React from 'react';
 import { css } from '@emotion/react';
 import AppLayout from '@/layouts/AppLayout';
 import { useSiteMeta } from '@/hooks';
-import { NihilAdminBlock } from '@/components/content/AdminBlock';
+import {
+  CharAdminBlock, NihilAdminBlock, OtherAdminBlock, RandomAdminBlock
+} from '@/components/content/AdminBlock';
 
 const AdminPage = () => {
   const AdminPageStyle = css({
@@ -31,6 +33,9 @@ const AdminPage = () => {
       <AppLayout meta={meta}>
         <div id='admin-page' css={AdminPageStyle}>
           <NihilAdminBlock />
+          <CharAdminBlock />
+          <OtherAdminBlock />
+          <RandomAdminBlock />
         </div>
       </AppLayout>
     </>

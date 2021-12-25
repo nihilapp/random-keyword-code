@@ -29,6 +29,8 @@ export const ResultBox = ({ children, }: IResultBox) => {
         fontWeight: '500',
         fontSize: '130%',
       },
+
+      '& > .color': {},
     },
 
     '@media all and (min-width: 1024px)': {

@@ -12,7 +12,7 @@ interface IRollButton {
   type?: ('class' | 'status' | 'dnd' | 'skill' | 'story')
 }
 
-export const CharRollButton = ({
+export const CharRollButton = React.memo(({
   children, words, setState, type,
 }: IRollButton) => {
   const pickWord = useCallback(() => {
@@ -183,4 +183,6 @@ export const CharRollButton = ({
       <button css={CharRollButtonStyle} type='button' onClick={pickWord}>{children}</button>
     </>
   );
-};
+});
+
+CharRollButton.displayName = 'CharRollButton';

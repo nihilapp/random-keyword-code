@@ -4,6 +4,7 @@ import { v4 as uuid } from 'uuid';
 import { useSiteMeta } from '@/hooks';
 import AppLayout from '@/layouts/AppLayout';
 import { Box, ResultBox } from '@/components/content';
+import { ColorRollButton } from '@/components/content/RollButton';
 
 const ColorPage = () => {
   const [ word, setWord, ] = useState([ (
@@ -26,7 +27,25 @@ const ColorPage = () => {
       <AppLayout meta={meta}>
         <div id='color-page' css={ColorPageStyle}>
           <Box mb={30} pt={6} pb={6} pl={6} align='center'>
-            content
+            <ColorRollButton setState={setWord}>
+              랜덤 색상 1개
+            </ColorRollButton>
+
+            <ColorRollButton setState={setWord} number={2}>
+              랜덤 색상 2개
+            </ColorRollButton>
+
+            <ColorRollButton setState={setWord} number={3}>
+              랜덤 색상 3개
+            </ColorRollButton>
+
+            <ColorRollButton setState={setWord} number={4}>
+              랜덤 색상 4개
+            </ColorRollButton>
+
+            <ColorRollButton setState={setWord} number={5}>
+              랜덤 색상 5개
+            </ColorRollButton>
           </Box>
           <Box>
             <ResultBox>

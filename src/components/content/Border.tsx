@@ -4,15 +4,16 @@ import { sizeData } from '@/data';
 
 interface IBorder {
   children: React.ReactNode;
+  mb?: number;
 }
 
-export const Border = ({ children, }: IBorder) => {
+export const Border = ({ children, mb = 50, }: IBorder) => {
   const BorderStyle = css({
     padding: '10px',
     borderRadius: '10px',
     backgroundColor: '#55555510',
     border: '2px solid #55555530',
-    marginBottom: '50px',
+    marginBottom: `${mb}px`,
 
     '&:nth-last-of-type(1)': {
       marginBottom: '0',

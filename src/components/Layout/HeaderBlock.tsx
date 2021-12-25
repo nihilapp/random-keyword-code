@@ -6,7 +6,7 @@ import { FaRegCopyright } from 'react-icons/fa';
 import { siteData, sizeData } from '@/data';
 import { NavBlock } from './NavBlock';
 
-export const HeaderBlock = () => {
+export const HeaderBlock = React.memo(() => {
   const HeaderBlockStyle = css({
     margin: '10px',
     padding: '10px 10px 6px 10px',
@@ -123,4 +123,6 @@ export const HeaderBlock = () => {
       </header>
     </>
   );
-};
+});
+
+HeaderBlock.displayName = 'HeaderBlock';
