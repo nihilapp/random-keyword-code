@@ -18,7 +18,7 @@
     "build": "yarn run remove && next build",
     "backupgit": "mv ../keyword/.git ../backup",
     "restoregit": "mv ../backup/.git ../keyword",
-    "export": "yarn run backupgit && yarn run remove && next build && next export -o ../keyword/ && yarn run restoregit"
+    "export": "yarn run backupgit && yarn run remove && next build && next export -o ../keyword/ && touch ../keyword/.nojekyll && yarn run restoregit && cd ../keyword && git add ."
   },
   "keywords": [],
   "author": "NIHILncunia",
