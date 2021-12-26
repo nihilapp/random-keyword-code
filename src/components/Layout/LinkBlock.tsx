@@ -7,9 +7,10 @@ import { sizeData } from '@/data';
 interface ILinkBlock {
   href: string;
   children: React.ReactNode;
+  type?: ('app' | 'external')
 }
 
-export const LinkBlock = React.memo(({ href, children, }: ILinkBlock) => {
+export const LinkBlock = React.memo(({ href, children, type = 'app', }: ILinkBlock) => {
   const [ className, setClassName, ] = useState('');
   const router = useRouter();
 
@@ -62,9 +63,14 @@ export const LinkBlock = React.memo(({ href, children, }: ILinkBlock) => {
 
   return (
     <>
-      <Link href={href} passHref>
-        <a css={LinkBlockStyle} className={className}>{children}</a>
-      </Link>
+      {type === 'app' && (
+        <Link href={href} passHref>
+          <a css={LinkBlockStyle} className={className}>{children}</a>
+        </Link>
+      )}
+      {type === 'external' && (
+        <a css={LinkBlockStyle} href={href} target='_blank' rel='noopener noreferrer'>{children}</a>
+      )}
     </>
   );
 });
