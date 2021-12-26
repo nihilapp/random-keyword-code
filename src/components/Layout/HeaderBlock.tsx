@@ -2,7 +2,7 @@ import React from 'react';
 import { css } from '@emotion/react';
 import Link from 'next/link';
 import { BsFillGearFill } from 'react-icons/bs';
-import { FaRegCopyright } from 'react-icons/fa';
+import { FaGithub, FaRegCopyright } from 'react-icons/fa';
 import { siteData, sizeData } from '@/data';
 import { NavBlock } from './NavBlock';
 
@@ -50,6 +50,22 @@ export const HeaderBlock = React.memo(() => {
       '& > .app-version': {
         marginRight: '5px',
         lineHeight: '1',
+      },
+
+      '& > .app-github': {
+        color: '#dddddd',
+        backgroundColor: '#444444',
+        borderRadius: '5px',
+        padding: '5px',
+        display: 'flex',
+        flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent: 'center',
+
+        '&:hover': {
+          backgroundColor: '#ffffff',
+          color: '#333333',
+        },
       },
 
       '& > .app-admin': {
@@ -111,6 +127,7 @@ export const HeaderBlock = React.memo(() => {
         </h1>
         <p>
           <span className='app-version'>{siteData.siteVersion}</span>
+          <a href='https://github.com/nihilapp/random-keyword-code' target='_blank' rel='noopener noreferrer' className='app-github'><FaGithub />깃허브</a>
           {process.env.NODE_ENV === 'development' && (
             <Link href='/admin' passHref>
               <a className='app-admin'><BsFillGearFill /></a>
