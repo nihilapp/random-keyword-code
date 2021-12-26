@@ -8,7 +8,7 @@ export const siteData: IConfig = {
   siteUrl: process.env.NODE_ENV === 'development'
     ? 'http://localhost:3000/keyword'
     : 'https://nihilapp.github.io/keyword',
-  siteImage: '',
+  siteImage: '/images/blog-image.png',
   siteVersion: 'v3.3.0',
   siteYear: 2021,
 };
