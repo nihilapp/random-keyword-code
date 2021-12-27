@@ -77,6 +77,7 @@ export const HeaderBlock = React.memo(() => {
         flexDirection: 'row',
         alignItems: 'center',
         justifyContent: 'center',
+        marginLeft: '5px',
 
         '&:hover': {
           backgroundColor: '#ffffff',

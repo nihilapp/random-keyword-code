@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://nihilapp.github.io/keyword/</loc>
+    <changefreq>daily</changefreq>
+    <priority>1</priority>
+  </url>
+
+  <url>
+    <loc>https://nihilapp.github.io/keyword/nihil</loc>
+    <changefreq>daily</changefreq>
+    <priority>1</priority>
+  </url>
+
+  <url>
+    <loc>https://nihilapp.github.io/keyword/character</loc>
+    <changefreq>daily</changefreq>
+    <priority>1</priority>
+  </url>
+
+  <url>
+    <loc>https://nihilapp.github.io/keyword/other</loc>
+    <changefreq>daily</changefreq>
+    <priority>1</priority>
+  </url>
+
+  <url>
+    <loc>https://nihilapp.github.io/keyword/color</loc>
+    <changefreq>daily</changefreq>
+    <priority>1</priority>
+  </url>
+
+  <url>
+    <loc>https://nihilapp.github.io/keyword/random</loc>
+    <changefreq>daily</changefreq>
+    <priority>1</priority>
+  </url>
+</urlset>
