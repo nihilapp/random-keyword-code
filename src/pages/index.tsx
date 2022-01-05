@@ -14,9 +14,9 @@ const IndexPage = () => {
     .filter((item) => item.label !== '홈')
     .filter((item) => item.label !== '니힐 전용');
 
-  const indexPageStyle = css({
-    marginTop: '50px',
-  });
+  const indexPageStyle = css`
+    margin-top: 50px;
+  `;
 
   const meta = useSiteMeta({
     title: '홈',

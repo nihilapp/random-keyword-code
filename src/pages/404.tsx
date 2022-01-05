@@ -9,46 +9,48 @@ import { Box, BoxHeader, P } from '@/components/content';
 import { sizeData } from '@/data';
 
 const NotPonud404 = () => {
-  const NotPound404Style = css({});
+  const NotPound404Style = css``;
 
-  const linkStyle = css({
-    textAlign: 'center',
-    display: 'flex',
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'center',
-    fontWeight: '500',
-    backgroundColor: '#33333330',
-    color: '#555555',
-    padding: '10px',
-    borderRadius: '10px',
-    width: '20%',
-    margin: '0 auto',
-    marginTop: '40px',
-    lineHeight: '1',
+  const linkStyle = css`
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+    background-color: #33333330;
+    color: #555555;
+    padding: 10px;
+    border-radius: 10px;
+    width: 20%;
+    margin: 40px auto 0;
+    line-height: 1;
 
-    '& > svg': {
-      marginRight: '5px',
-    },
+    & > svg {
+      margin-right: 5px;
+    }
 
-    '&:hover': {
-      backgroundColor: '#333333',
-      color: '#ffffff',
-    },
+    &:hover {
+      background-color: #333333;
+      color: #ffffff;
+    }
 
-    '@media all and (min-width: 1024px)': {
-      fontSize: `${sizeData[3]}`,
-    },
-    '@media all and (min-width: 768px) and (max-width: 1023px)': {
-      fontSize: `${sizeData[2]}`,
-    },
-    '@media all and (min-width: 480px) and (max-width: 767px)': {
-      fontSize: `${sizeData[2]}`,
-    },
-    '@media all and (max-width: 479px)': {
-      fontSize: `${sizeData[1]}`,
-    },
-  });
+    @media all and (min-width: 1024px) {
+      font-size: ${sizeData[3]};
+    }
+
+    @media all and (min-width: 768px) and (max-width: 1023px) {
+      font-size: ${sizeData[2]};
+    }
+
+    @media all and (min-width: 480px) and (max-width: 767px) {
+      font-size: ${sizeData[2]};
+    }
+
+    @media all and (max-width: 479px) {
+      font-size: ${sizeData[1]};
+    }
+  `;
 
   const meta = useSiteMeta({
     title: '404',

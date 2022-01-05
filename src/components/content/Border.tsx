@@ -8,30 +8,33 @@ interface IBorder {
 }
 
 export const Border = ({ children, mb = 50, }: IBorder) => {
-  const BorderStyle = css({
-    padding: '10px',
-    borderRadius: '10px',
-    backgroundColor: '#55555510',
-    border: '2px solid #55555530',
-    marginBottom: `${mb}px`,
+  const BorderStyle = css`
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #55555510;
+    border: 2px solid #55555530;
+    margin-bottom: ${mb}px;
 
-    '&:nth-last-of-type(1)': {
-      marginBottom: '0',
-    },
+    &:nth-last-of-type(1) {
+      margin-bottom: 0;
+    }
 
-    '@media all and (min-width: 1024px)': {
-      fontSize: `${sizeData[3]}`,
-    },
-    '@media all and (min-width: 768px) and (max-width: 1023px)': {
-      fontSize: `${sizeData[2]}`,
-    },
-    '@media all and (min-width: 480px) and (max-width: 767px)': {
-      fontSize: `${sizeData[2]}`,
-    },
-    '@media all and (max-width: 479px)': {
-      fontSize: `${sizeData[1]}`,
-    },
-  });
+    @media all and (min-width: 1024px) {
+      font-size: ${sizeData[3]};
+    }
+
+    @media all and (min-width: 768px) and (max-width: 1023px) {
+      font-size: ${sizeData[2]};
+    }
+
+    @media all and (min-width: 480px) and (max-width: 767px) {
+      font-size: ${sizeData[2]};
+    }
+
+    @media all and (max-width: 479px) {
+      font-size: ${sizeData[1]};
+    }
+  `;
 
   return (
     <>

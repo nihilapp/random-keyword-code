@@ -7,21 +7,21 @@ import {
 } from '@/components/content/AdminBlock';
 
 const AdminPage = () => {
-  const AdminPageStyle = css({
-    marginTop: '50px',
+  const AdminPageStyle = css`
+    margin-top: 50px;
 
-    '& input': {
-      backgroundColor: '#33333330',
-      borderRadius: '5px',
-      border: 'none',
-      lineHeight: '1',
-      letterSpacing: '-1px',
-      width: '100%',
-      padding: '10px',
-      color: '#333333',
-      fontWeight: '500',
-    },
-  });
+    & input {
+      background-color: #33333330;
+      color: #333333;
+      border-radius: 5px;
+      border: none;
+      line-height: 1;
+      letter-spacing: -1px;
+      width: 100%;
+      padding: 10px;
+      font-weight: 500;
+    }
+  `;
 
   const meta = useSiteMeta({
     title: '관리',

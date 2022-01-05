@@ -16,9 +16,9 @@ const OtherPage = ({ words, }: IOtherPage) => {
     </p>
   ), ]);
 
-  const OtherPageStyle = css({
-    marginTop: '50px',
-  });
+  const OtherPageStyle = css`
+    margin-top: 50px;
+  `;
 
   const meta = useSiteMeta({
     title: '기타',

@@ -14,15 +14,15 @@ interface IBox {
 export const Box = React.memo(({
   children, mt = 10, mb = 10, pt = 10, pb = 10, pl = 10, align = 'left',
 }: IBox) => {
-  const BoxStyle = css({
-    margin: `${mt}px 10px ${mb}px 10px`,
-    padding: `${pt}px 10px ${pb}px ${pl}px`,
-    backgroundColor: '#ffffff',
-    borderRadius: '10px',
-    boxSizing: 'border-box',
-    boxShadow: '0 0 10px -4px #333333',
-    textAlign: `${align}`,
-  });
+  const BoxStyle = css`
+    margin: ${mt}px 0 ${mb}px 0;
+    padding: ${pt}px 10px ${pb}px ${pl}px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-sizing: border-box;
+    box-shadow: 0 0 10px -4px #333333;
+    text-align: ${align};
+  `;
 
   return (
     <>

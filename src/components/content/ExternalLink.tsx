@@ -8,29 +8,29 @@ interface IExternalLink {
 }
 
 export const ExternalLink = ({ href, label, }: IExternalLink) => {
-  const ExternalLinkStyle = css({
-    backgroundColor: '#11b32c30',
-    color: '#11b32c',
-    lineHeight: '1',
-    display: 'inline-flex',
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'center',
-    borderRadius: '5px',
-    padding: '5px',
-    letterSpacing: '-1px',
-    fontWeight: '500',
-    textIndent: '0',
+  const ExternalLinkStyle = css`
+    background-color: #11b32c30;
+    color: #11b32c;
+    line-height: 1;
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    padding: 5px;
+    letter-spacing: -1px;
+    font-weight: 500;
+    text-indent: 0;
 
-    '&:hover': {
-      color: '#ffffff',
-      backgroundColor: '#11b32c',
-    },
+    &:hover {
+      color: #ffffff;
+      background-color: #11b32c;
+    }
 
-    '& > svg': {
-      marginLeft: '5px',
-    },
-  });
+    & > svg {
+      margin-left: 5px;
+    }
+  `;
 
   return (
     <>

@@ -13,9 +13,9 @@ const ColorPage = () => {
     </p>
   ), ]);
 
-  const ColorPageStyle = css({
-    marginTop: '50px',
-  });
+  const ColorPageStyle = css`
+    margin-top: 50px;
+  `;
 
   const meta = useSiteMeta({
     title: '색상',

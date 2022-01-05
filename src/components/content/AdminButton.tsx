@@ -9,51 +9,54 @@ interface IAdminButton {
 }
 
 export const AdminButton = ({ create, remove, }: IAdminButton) => {
-  const AdminButtonStyle = css({
-    marginTop: '10px',
+  const AdminButtonStyle = css`
+    margin-top: 10px;
 
-    '& > button': {
-      display: 'flex',
-      flexDirection: 'row',
-      alignItems: 'center',
-      justifyContent: 'center',
-      padding: '10px 0',
-      fontWeight: '500',
-      borderRadius: '5px',
-      lineHeight: '1',
-      border: 'none',
-      letterSpacing: '-1px',
-      width: '100%',
-      cursor: 'pointer',
+    & > button {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      padding: 10px 0;
+      font-weight: 500;
+      border-radius: 5px;
+      line-height: 1;
+      border: none;
+      letter-spacing: -1px;
+      width: 100%;
+      cursor: pointer;
 
-      '& > svg': {
-        marginRight: '5px',
-      },
+      & > svg {
+        margin-right: 5px;
+      }
 
-      '&:nth-of-type(1)': {
-        backgroundColor: '#11b32c30',
-        color: '#11b32c',
+      &:nth-of-type(1) {
+        background-color: #11b32c30;
+        color: #11b32c;
 
-        '&:hover': {
-          color: '#ffffff',
-          backgroundColor: '#11b32c',
-        },
-      },
+        &:hover {
+          color: #ffffff;
+          background-color: #11b32c;
+        }
+      }
 
-      '@media all and (min-width: 1024px)': {
-        fontSize: `${sizeData[3]}`,
-      },
-      '@media all and (min-width: 768px) and (max-width: 1023px)': {
-        fontSize: `${sizeData[2]}`,
-      },
-      '@media all and (min-width: 480px) and (max-width: 767px)': {
-        fontSize: `${sizeData[2]}`,
-      },
-      '@media all and (max-width: 479px)': {
-        fontSize: `${sizeData[1]}`,
-      },
-    },
-  });
+      @media all and (min-width: 1024px) {
+        font-size: ${sizeData[3]};
+      }
+
+      @media all and (min-width: 768px) and (max-width: 1023px) {
+        font-size: ${sizeData[2]};
+      }
+
+      @media all and (min-width: 480px) and (max-width: 767px) {
+        font-size: ${sizeData[2]};
+      }
+
+      @media all and (max-width: 479px) {
+        font-size: ${sizeData[1]};
+      }
+    }
+  `;
 
   return (
     <>

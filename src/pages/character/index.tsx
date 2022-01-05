@@ -16,9 +16,9 @@ const CharacterPage = ({ words, }: ICharacterPage) => {
     </p>
   ), ]);
 
-  const CharacterPageStyle = css({
-    marginTop: '50px',
-  });
+  const CharacterPageStyle = css`
+    margin-top: 50px;
+  `;
 
   const meta = useSiteMeta({
     title: '캐릭터',

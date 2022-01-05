@@ -17,9 +17,9 @@ const NihilPage = ({ words, }: INihilPage) => {
     </p>
   ), ]);
 
-  const NihilPageStyle = css({
-    marginTop: '50px',
-  });
+  const NihilPageStyle = css`
+    margin-top: 50px;
+  `;
 
   const meta = useSiteMeta({
     title: '니힐 전용',

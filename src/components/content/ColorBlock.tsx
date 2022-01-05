@@ -7,20 +7,20 @@ interface IColorBlock {
 }
 
 export const ColorBlock = ({ hex, }: IColorBlock) => {
-  const ColorBlockStyle = css({
-    display: 'block',
-    color: colorContrast(hex),
-    backgroundColor: `#${hex}`,
-    lineHeight: '1',
-    padding: '20px 10px',
-    marginBottom: '10px',
-    borderRadius: '10px',
-    fontWeight: '900',
+  const ColorBlockStyle = css`
+    display: block;
+    color: ${colorContrast(hex)};
+    background-color: ${hex};
+    line-height: 1;
+    padding: 20px 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    font-weight: 900;
 
-    ':nth-last-of-type(1)': {
-      marginBottom: '0',
-    },
-  });
+    &:nth-last-of-type(1) {
+      margin-bottom: 0;
+    }
+  `;
 
   return (
     <>

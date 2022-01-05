@@ -9,55 +9,58 @@ interface ILinkBox {
 }
 
 export const LinkBox = ({ href, children, }: ILinkBox) => {
-  const LinkBoxStyle = css({
-    margin: '15px 0',
-    borderRadius: '10px',
+  const LinkBoxStyle = css`
+    margin: 15px 0;
+    border-radius: 10px;
 
-    '&:nth-of-type(1)': {
-      marginTop: '0',
-    },
+    &:nth-of-type(1) {
+      margin-top: 0;
+    }
 
-    '&:nth-last-of-type(1)': {
-      marginBottom: '0',
-    },
+    &:nth-last-of-type(1) {
+      margin-bottom: 0;
+    }
 
-    '& > a': {
-      padding: '20px 10px',
-      backgroundColor: '#33333330',
-      color: '#555555',
-      borderRadius: '10px',
-      display: 'flex',
-      flexDirection: 'row',
-      alignItems: 'center',
-      justifyContent: 'center',
-      lineHeight: '1',
-      textAlign: 'center',
-      fontWeight: '500',
-      letterSpacing: '-1px',
+    & > a {
+      padding: 20px 10px;
+      background-color: #33333330;
+      color: #555555;
+      border-radius: 10px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      line-height: 1;
+      text-align: center;
+      font-weight: 500;
+      letter-spacing: -1px;
 
-      '& > svg': {
-        marginRight: '5px',
-      },
+      & > svg {
+        margin-right: 5px;
+      }
 
-      '&:hover': {
-        color: '#ffffff',
-        backgroundColor: '#333333',
-      },
-    },
+      &:hover {
+        color: #ffffff;
+        background-color: #333333;
+      }
+    }
 
-    '@media all and (min-width: 1024px)': {
-      fontSize: `${sizeData[6]}`,
-    },
-    '@media all and (min-width: 768px) and (max-width: 1023px)': {
-      fontSize: `${sizeData[5]}`,
-    },
-    '@media all and (min-width: 480px) and (max-width: 767px)': {
-      fontSize: `${sizeData[5]}`,
-    },
-    '@media all and (max-width: 479px)': {
-      fontSize: `${sizeData[4]}`,
-    },
-  });
+    @media all and (min-width: 1024px) {
+      font-size: ${sizeData[6]};
+    }
+
+    @media all and (min-width: 768px) and (max-width: 1023px) {
+      font-size: ${sizeData[5]};
+    }
+
+    @media all and (min-width: 480px) and (max-width: 767px) {
+      font-size: ${sizeData[5]};
+    }
+
+    @media all and (max-width: 479px) {
+      font-size: ${sizeData[4]};
+    }
+  `;
 
   return (
     <>

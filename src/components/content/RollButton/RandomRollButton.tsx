@@ -1,9 +1,8 @@
 import React, { useCallback } from 'react';
-import { css } from '@emotion/react';
 import { v4 as uuid } from 'uuid';
 import { getRandomKeyword } from '@/utils/words/front';
-import { sizeData } from '@/data';
 import { IRandomWords } from '@/types';
+import { RollButtonStyle as RandomRollButtonStyle } from './RollButtonStyle';
 
 interface IRollButton {
   children: React.ReactNode;
@@ -108,37 +107,6 @@ export const RandomRollButton = React.memo(({
       setState(state);
     }
   }, []);
-
-  const RandomRollButtonStyle = css({
-    letterSpacing: '-1px',
-    border: 'none',
-    lineHeight: '1',
-    borderRadius: '5px',
-    color: '#555555',
-    backgroundColor: '#33333330',
-    padding: '5px 10px',
-    fontWeight: '500',
-    cursor: 'pointer',
-    margin: '4px',
-
-    '&:hover': {
-      color: '#ffffff',
-      backgroundColor: '#333333',
-    },
-
-    '@media all and (min-width: 1024px)': {
-      fontSize: `${sizeData[3]}`,
-    },
-    '@media all and (min-width: 768px) and (max-width: 1023px)': {
-      fontSize: `${sizeData[2]}`,
-    },
-    '@media all and (min-width: 480px) and (max-width: 767px)': {
-      fontSize: `${sizeData[2]}`,
-    },
-    '@media all and (max-width: 479px)': {
-      fontSize: `${sizeData[1]}`,
-    },
-  });
 
   return (
     <>

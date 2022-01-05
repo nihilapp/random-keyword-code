@@ -8,40 +8,43 @@ interface IAdminInput {
 }
 
 export const AdminInput = ({ inputRef, holder, }: IAdminInput) => {
-  const AdminInputStyle = css({
-    backgroundColor: '#33333330',
-    borderRadius: '5px',
-    border: 'none',
-    lineHeight: '1',
-    letterSpacing: '-1px',
-    width: '100%',
-    padding: '10px',
-    color: '#333333',
-    fontWeight: '500',
-    textAlign: 'center',
-    margin: '5px 0',
+  const AdminInputStyle = css`
+    background-color: #33333330;
+    border-radius: 5px;
+    border: none;
+    line-height: 1;
+    letter-spacing: -1px;
+    width: 100%;
+    padding: 10px;
+    color: #333333;
+    font-weight: 500;
+    text-align: center;
+    margin: 5px 0;
 
-    '&:nth-of-type(1)': {
-      marginTop: '0',
-    },
+    &:nth-of-type(1) {
+      margin-top: 0;
+    }
 
-    '&:nth-last-of-type(1)': {
-      marginBottom: '0',
-    },
+    &:nth-last-of-type(1) {
+      margin-bottom: 0;
+    }
 
-    '@media all and (min-width: 1024px)': {
-      fontSize: `${sizeData[3]}`,
-    },
-    '@media all and (min-width: 768px) and (max-width: 1023px)': {
-      fontSize: `${sizeData[2]}`,
-    },
-    '@media all and (min-width: 480px) and (max-width: 767px)': {
-      fontSize: `${sizeData[2]}`,
-    },
-    '@media all and (max-width: 479px)': {
-      fontSize: `${sizeData[1]}`,
-    },
-  });
+    @media all and (min-width: 1024px) {
+      font-size: ${sizeData[3]};
+    }
+
+    @media all and (min-width: 768px) and (max-width: 1023px) {
+      font-size: ${sizeData[2]};
+    }
+
+    @media all and (min-width: 480px) and (max-width: 767px) {
+      font-size: ${sizeData[2]};
+    }
+
+    @media all and (max-width: 479px) {
+      font-size: ${sizeData[1]};
+    }
+  `;
 
   return (
     <>

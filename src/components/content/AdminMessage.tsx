@@ -7,26 +7,29 @@ interface IAdminMessage {
 }
 
 export const AdminMessage = ({ message, }: IAdminMessage) => {
-  const AdminMessageStyle = css({
-    letterSpacing: '-1px',
-    fontWeight: '900',
-    textAlign: 'center',
-    marginTop: '10px',
-    color: '#ff5b5b',
+  const AdminMessageStyle = css`
+    letter-spacing: -1px;
+    font-weight: 900;
+    text-align: center;
+    margin-top: 10px;
+    color: #ff5b5b;
 
-    '@media all and (min-width: 1024px)': {
-      fontSize: `${sizeData[3]}`,
-    },
-    '@media all and (min-width: 768px) and (max-width: 1023px)': {
-      fontSize: `${sizeData[2]}`,
-    },
-    '@media all and (min-width: 480px) and (max-width: 767px)': {
-      fontSize: `${sizeData[2]}`,
-    },
-    '@media all and (max-width: 479px)': {
-      fontSize: `${sizeData[1]}`,
-    },
-  });
+    @media all and (min-width: 1024px) {
+      font-size: ${sizeData[3]};
+    }
+
+    @media all and (min-width: 768px) and (max-width: 1023px) {
+      font-size: ${sizeData[2]};
+    }
+
+    @media all and (min-width: 480px) and (max-width: 767px) {
+      font-size: ${sizeData[2]};
+    }
+
+    @media all and (max-width: 479px) {
+      font-size: ${sizeData[1]};
+    }
+  `;
 
   return (
     <>

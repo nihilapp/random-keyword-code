@@ -16,9 +16,9 @@ const RandomPage = ({ words, }: IRandomPage) => {
     </p>
   ), ]);
 
-  const RandomPageStyle = css({
-    marginTop: '50px',
-  });
+  const RandomPageStyle = css`
+    margin-top: 50px;
+  `;
 
   const meta = useSiteMeta({
     title: '랜덤',

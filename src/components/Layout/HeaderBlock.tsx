@@ -7,114 +7,132 @@ import { siteData, sizeData } from '@/data';
 import { NavBlock } from './NavBlock';
 
 export const HeaderBlock = React.memo(() => {
-  const HeaderBlockStyle = css({
-    margin: '10px',
-    padding: '10px 10px 6px 10px',
-    backgroundColor: '#333333',
-    color: '#ffffff',
-    textAlign: 'center',
-    borderRadius: '10px',
+  const HeaderBlockStyle = css`
+    padding: 10px 10px 6px 10px;
+    background-color: #333333;
+    color: #ffffff;
+    text-align: center;
+    border-radius: 10px;
 
-    '& > h1': {
-      fontWeight: '900',
-      marginBottom: '5px',
-      display: 'flex',
-      flexDirection: 'row',
-      alignItems: 'center',
-      justifyContent: 'center',
+    & > h1 {
+      font-weight: 900;
+      margin-bottom: 5px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
 
-      '& > img': {
-        marginRight: '5px',
-        display: 'block',
-      },
-    },
+      & > img {
+        margin-right: 5px;
+        display: block;
+      }
+    }
 
-    '& > p:nth-of-type(2)': {
-      marginTop: '5px',
-      marginBottom: '6px',
-      fontWeight: '900',
+    & > p {
+      font-weight: 500;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      line-height: 1;
 
-      '& > svg': {
-        marginRight: '5px',
-      },
-    },
+      & > .app-version {
+        margin-right: 5px;
+        line-height: 1;
+      }
 
-    '& > p': {
-      fontWeight: '500',
-      display: 'flex',
-      flexDirection: 'row',
-      alignItems: 'center',
-      justifyContent: 'center',
-      lineHeight: '1',
+      & > .app-github {
+        color: #dddddd;
+        background-color: #444444;
+        border-radius: 5px;
+        padding: 5px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
 
-      '& > .app-version': {
-        marginRight: '5px',
-        lineHeight: '1',
-      },
+        &:hover {
+          background-color: #ffffff;
+          color: #333333;
+        }
+      }
 
-      '& > .app-github': {
-        color: '#dddddd',
-        backgroundColor: '#444444',
-        borderRadius: '5px',
-        padding: '5px',
-        display: 'flex',
-        flexDirection: 'row',
-        alignItems: 'center',
-        justifyContent: 'center',
+      & > .app-admin {
+        color: #dddddd;
+        background-color: #444444;
+        border-radius: 5px;
+        padding: 5px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        margin-left: 5px;
 
-        '&:hover': {
-          backgroundColor: '#ffffff',
-          color: '#333333',
-        },
-      },
+        &:hover {
+          background-color: #ffffff;
+          color: #333333;
+        }
+      }
 
-      '& > .app-admin': {
-        color: '#dddddd',
-        backgroundColor: '#444444',
-        borderRadius: '5px',
-        padding: '5px',
-        display: 'flex',
-        flexDirection: 'row',
-        alignItems: 'center',
-        justifyContent: 'center',
-        marginLeft: '5px',
+      &:nth-of-type(2) {
+        margin-top: 5px;
+        margin-bottom: 6px;
+        font-weight: 900;
 
-        '&:hover': {
-          backgroundColor: '#ffffff',
-          color: '#333333',
-        },
-      },
-    },
+        & > svg {
+          margin-right: 5px;
+        }
+      }
+    }
 
-    '@media all and (min-width: 1024px)': {
-      h1: {
-        fontSize: `${sizeData[6]};`,
-        img: { width: '38px', },
-      },
-      p: { fontSize: `${sizeData[3]};`, },
-    },
-    '@media all and (min-width: 768px) and (max-width: 1023px)': {
-      h1: {
-        fontSize: `${sizeData[5]};`,
-        img: { width: '32px', },
-      },
-      p: { fontSize: `${sizeData[2]};`, },
-    },
-    '@media all and (min-width: 480px) and (max-width: 767px)': {
-      h1: {
-        fontSize: `${sizeData[5]};`,
-        img: { width: '32px', },
-      },
-      p: { fontSize: `${sizeData[2]};`, },
-    },
-    '@media all and (max-width: 479px)': {
-      h1: {
-        fontSize: `${sizeData[4]};`,
-        img: { width: '25px', },
-      },
-      p: { fontSize: `${sizeData[1]};`, },
-    },
-  });
+    @media all and (min-width: 1024px) {
+      h1 {
+        font-size: ${sizeData[6]};
+        img {
+          width: 38px;
+        }
+      }
+      p {
+        font-size: ${sizeData[3]};
+      }
+    }
+
+    @media all and (min-width: 768px) and (max-width: 1023px) {
+      h1 {
+        font-size: ${sizeData[5]};
+        img {
+          width: 32px;
+        }
+      }
+      p {
+        font-size: ${sizeData[2]};
+      }
+    }
+
+    @media all and (min-width: 480px) and (max-width: 767px) {
+      h1 {
+        font-size: ${sizeData[5]};
+        img {
+          width: 32px;
+        }
+      }
+      p {
+        font-size: ${sizeData[2]};
+      }
+    }
+
+    @media all and (max-width: 479px) {
+      h1 {
+        font-size: ${sizeData[4]};
+        img {
+          width: 25px;
+        }
+      }
+      p {
+        font-size: ${sizeData[1]};
+      }
+    }
+  `;
 
   const nowYear = new Date().getFullYear();
   const year = nowYear > 2021 ? `2021-${nowYear}` : `2021`;

@@ -3,7 +3,7 @@ import { css } from '@emotion/react';
 import { IHaveChildren } from '@/types';
 
 export const MainBlock = ({ children, }: IHaveChildren) => {
-  const MainBlockStyle = css({});
+  const MainBlockStyle = css``;
 
   return (
     <>

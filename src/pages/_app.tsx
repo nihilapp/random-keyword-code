@@ -2,7 +2,6 @@ import React from 'react';
 import Head from 'next/head';
 import { AppProps } from 'next/app';
 import { siteData } from '@/data';
-import '@/styles/importFont.css';
 
 const App = ({ Component, pageProps, }: AppProps) => (
   <>

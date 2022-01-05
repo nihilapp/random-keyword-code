@@ -20,46 +20,45 @@ export const LinkBlock = React.memo(({ href, children, type = 'app', }: ILinkBlo
     }
   }, []);
 
-  const LinkBlockStyle = css({
-    display: 'inline-flex',
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'center',
-    backgroundColor: '#444444',
-    color: '#dddddd',
-    padding: '10px',
-    borderRadius: '5px',
-    margin: '4px',
-    fontWeight: '500',
-    lineHeight: '1',
+  const LinkBlockStyle = css`
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: #444444;
+    color: #dddddd;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 4px;
+    font-weight: 500;
+    line-height: 1;
 
-    '&.selected': {
-      backgroundColor: '#ffffff',
-      color: '#333333',
-    },
+    &.selected,
+    &:hover{
+      background-color: #ffffff;
+      color: #333333;
+    }
 
-    '&:hover': {
-      backgroundColor: '#ffffff',
-      color: '#333333',
-    },
+    & > svg {
+      margin-right: 5px;
+    }
 
-    '& > svg': {
-      marginRight: '5px',
-    },
+    @media all and (min-width: 1024px) {
+      font-size: ${sizeData[3]};
+    }
 
-    '@media all and (min-width: 1024px)': {
-      fontSize: `${sizeData[3]}`,
-    },
-    '@media all and (min-width: 768px) and (max-width: 1023px)': {
-      fontSize: `${sizeData[2]}`,
-    },
-    '@media all and (min-width: 480px) and (max-width: 767px)': {
-      fontSize: `${sizeData[2]}`,
-    },
-    '@media all and (max-width: 479px)': {
-      fontSize: `${sizeData[1]}`,
-    },
-  });
+    @media all and (min-width: 768px) and (max-width: 1023px) {
+      font-size: ${sizeData[2]};
+    }
+
+    @media all and (min-width: 480px) and (max-width: 767px) {
+      font-size: ${sizeData[2]};
+    }
+
+    @media all and (max-width: 479px) {
+      font-size: ${sizeData[1]};
+    }
+  `;
 
   return (
     <>
