@@ -51,6 +51,10 @@ export const HeaderBlock = React.memo(() => {
         align-items: center;
         justify-content: center;
 
+        & > svg {
+          margin-right: 5px;
+        }
+
         &:hover {
           background-color: #ffffff;
           color: #333333;
