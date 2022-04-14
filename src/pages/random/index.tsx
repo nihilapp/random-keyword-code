@@ -4,7 +4,7 @@ import { v4 as uuid } from 'uuid';
 import { GetStaticProps } from 'next';
 import { useSiteMeta } from '@/hooks';
 import AppLayout from '@/layouts/AppLayout';
-import { Box, ResultBox } from '@/components/content';
+import { Box, GoogleAd, ResultBox } from '@/components/content';
 import { RandomRollButton } from '@/components/content/RollButton';
 import { getWordList } from '@/utils/words/back';
 import { IRandomPage } from '@/types';
@@ -46,7 +46,8 @@ const RandomPage = ({ words, }: IRandomPage) => {
               키워드 100개 ({words.randomLength}개)
             </RandomRollButton>
           </Box>
-          <Box>
+          <GoogleAd />
+          <Box mb={0}>
             <ResultBox>
               {word.map((item) => item)}
             </ResultBox>

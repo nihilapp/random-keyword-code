@@ -4,7 +4,7 @@ import { GetStaticProps } from 'next';
 import { css } from '@emotion/react';
 import AppLayout from '@/layouts/AppLayout';
 import { useSiteMeta } from '@/hooks';
-import { Box, ResultBox } from '@/components/content';
+import { Box, GoogleAd, ResultBox } from '@/components/content';
 import { getWordList } from '@/utils/words/back';
 import { ICharacterPage } from '@/types';
 import { CharRollButton, RollButton } from '@/components/content/RollButton';
@@ -97,7 +97,8 @@ const CharacterPage = ({ words, }: ICharacterPage) => {
               패션 컨셉 ({words.fashionConcept.length}개)
             </RollButton>
           </Box>
-          <Box>
+          <GoogleAd />
+          <Box mb={0}>
             <ResultBox>
               {word.map((item) => item)}
             </ResultBox>

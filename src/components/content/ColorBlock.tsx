@@ -10,7 +10,7 @@ export const ColorBlock = ({ hex, }: IColorBlock) => {
   const ColorBlockStyle = css`
     display: block;
     color: ${colorContrast(hex)};
-    background-color: ${hex};
+    background-color: #${hex};
     line-height: 1;
     padding: 20px 10px;
     margin-bottom: 10px;

@@ -6,7 +6,7 @@ import { getWordJson, getWordList } from '@/utils/words/back';
 import AppLayout from '@/layouts/AppLayout';
 import { useSiteMeta } from '@/hooks';
 import { IOtherMinor, IOtherPage } from '@/types';
-import { Box, ResultBox } from '@/components/content';
+import { Box, GoogleAd, ResultBox } from '@/components/content';
 import { OtherRollButton, RollButton } from '@/components/content/RollButton';
 
 const OtherPage = ({ words, }: IOtherPage) => {
@@ -58,7 +58,8 @@ const OtherPage = ({ words, }: IOtherPage) => {
               플레잉 카드 5장 ({words.playingCard.length}개)
             </OtherRollButton>
           </Box>
-          <Box>
+          <GoogleAd />
+          <Box mb={0}>
             <ResultBox>
               {word.map((item) => item)}
             </ResultBox>

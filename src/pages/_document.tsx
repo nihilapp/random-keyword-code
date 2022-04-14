@@ -12,7 +12,18 @@ class NextDocument extends Document {
   render() {
     return (
       <Html lang='ko'>
-        <Head />
+        <Head>
+          <link
+            rel='stylesheet'
+            href='https://use.fontawesome.com/releases/v5.15.4/css/all.css'
+          />
+
+          <script
+            data-ad-client='ca-pub-9256396675875954'
+            async
+            src='https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js'
+          />
+        </Head>
         <body>
           <Main />
           <NextScript />

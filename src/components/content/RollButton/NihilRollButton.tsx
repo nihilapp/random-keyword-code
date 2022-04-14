@@ -154,16 +154,19 @@ export const NihilRollButton = React.memo(({
       const genderWords = words.genders;
       const whoWords = words.races.concat(words.classes);
 
-      const purpose = getWord(1, purposeWords, 'normal');
-      const place = getWord(1, placeWords, 'normal');
-      const gender = getWord(1, genderWords, 'normal');
-      const who = getWord(1, whoWords, 'normal');
+      const purpose = getWord(1, purposeWords, 'normal').join('');
+      const place = getWord(1, placeWords, 'normal').join('');
+      const gender = getWord(1, genderWords, 'normal').join('');
+      const who = getWord(1, whoWords, 'normal').join('');
+
+      console.log(purpose);
+      console.log(place);
 
       const state = [ (
         <p key={uuid()}>
           <span className='blue keyword'>{purpose}</span> 위해<br />
           <span className='blue keyword'>{place}</span>에서 온<br />
-          <span className='blue keyword'>{gender} {who}</span>
+          <span className='blue keyword'>{`${gender} ${who}`}</span>
         </p>
       ), ];
 
