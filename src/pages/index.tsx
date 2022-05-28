@@ -5,7 +5,7 @@ import { RiContactsBookFill } from 'react-icons/ri';
 import AppLayout from '@/layouts/AppLayout';
 import { useSiteMeta } from '@/hooks';
 import {
-  Box, BoxHeader, ExternalLink, GoogleAd, LinkBox, P
+  Box, BoxHeader, ExternalLink, LinkBox, P
 } from '@/components/content';
 import { pathList } from '@/data/path.data';
 
@@ -34,7 +34,6 @@ const IndexPage = () => {
 
             <P mb={0} align='justify'><strong>주의사항: 모든 결과는 랜덤이기 때문에 키워드들이 조합되는 버튼의 경우, 조합이 매끄럽지 못할 수 있습니다.</strong></P>
           </Box>
-          <GoogleAd />
           <Box mb={0}>
             <BoxHeader mt={0} mb={30}><RiContactsBookFill />연락처</BoxHeader>
 

@@ -4,7 +4,7 @@ import { GetStaticProps } from 'next';
 import { v4 as uuid } from 'uuid';
 import AppLayout from '@/layouts/AppLayout';
 import { useSiteMeta } from '@/hooks';
-import { Box, GoogleAd, ResultBox } from '@/components/content';
+import { Box, ResultBox } from '@/components/content';
 import { getWordJson, getWordList } from '@/utils/words/back';
 import { NihilRollButton, RollButton } from '@/components/content/RollButton';
 import { INihilArea, INihilOrga, INihilPage } from '@/types';
@@ -51,7 +51,6 @@ const NihilPage = ({ words, }: INihilPage) => {
               배경 스토리 ({getBackStoryLength(words)}개)
             </NihilRollButton>
           </Box>
-          <GoogleAd />
           <Box mb={0}>
             <ResultBox>
               {word.map((item) => item)}

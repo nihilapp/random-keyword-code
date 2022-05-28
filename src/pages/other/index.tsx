@@ -6,8 +6,8 @@ import { getWordJson, getWordList } from '@/utils/words/back';
 import AppLayout from '@/layouts/AppLayout';
 import { useSiteMeta } from '@/hooks';
 import { IOtherMinor, IOtherPage } from '@/types';
-import { Box, GoogleAd, ResultBox } from '@/components/content';
-import { OtherRollButton, RollButton } from '@/components/content/RollButton';
+import { Box, ResultBox } from '@/components/content';
+import { OtherRollButton, RollButton, TimeRollButton } from '@/components/content/RollButton';
 
 const OtherPage = ({ words, }: IOtherPage) => {
   const [ word, setWord, ] = useState([ (
@@ -57,8 +57,11 @@ const OtherPage = ({ words, }: IOtherPage) => {
             <OtherRollButton words={words} setState={setWord} type='playing'>
               플레잉 카드 5장 ({words.playingCard.length}개)
             </OtherRollButton>
+
+            <TimeRollButton setState={setWord}>
+              시간 (24시간)
+            </TimeRollButton>
           </Box>
-          <GoogleAd />
           <Box mb={0}>
             <ResultBox>
               {word.map((item) => item)}

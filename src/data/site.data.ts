@@ -9,6 +9,6 @@ export const siteData: IConfig = {
     ? 'http://localhost:3000/keyword'
     : 'https://nihilapp.github.io/keyword',
   siteImage: '/images/blog-image.png',
-  siteVersion: 'v3.3.0',
+  siteVersion: 'v3.4.0',
   siteYear: 2021,
 };

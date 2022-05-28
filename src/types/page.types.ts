@@ -34,6 +34,7 @@ export interface ICharacterWords {
   whereFantasy: string[];
   weapons: string[];
   fashionConcept: string[];
+  age: string[];
 }
 
 export interface ICharacterPage {

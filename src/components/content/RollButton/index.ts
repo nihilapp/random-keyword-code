@@ -4,3 +4,4 @@ export * from './CharRollButton';
 export * from './OtherRollButton';
 export * from './RandomRollButton';
 export * from './ColorRollButton';
+export * from './TimeRollButton';

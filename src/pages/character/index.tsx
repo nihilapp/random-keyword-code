@@ -4,7 +4,7 @@ import { GetStaticProps } from 'next';
 import { css } from '@emotion/react';
 import AppLayout from '@/layouts/AppLayout';
 import { useSiteMeta } from '@/hooks';
-import { Box, GoogleAd, ResultBox } from '@/components/content';
+import { Box, ResultBox } from '@/components/content';
 import { getWordList } from '@/utils/words/back';
 import { ICharacterPage } from '@/types';
 import { CharRollButton, RollButton } from '@/components/content/RollButton';
@@ -73,6 +73,10 @@ const CharacterPage = ({ words, }: ICharacterPage) => {
               성격(부정적인) ({words.personalityNegative.length}개)
             </RollButton>
 
+            <RollButton words={words.age} setState={setWord}>
+              나이 (1~10000+)
+            </RollButton>
+
             <CharRollButton words={words} setState={setWord} type='dnd'>
               성향(D&#38;D) (9개)
             </CharRollButton>
@@ -97,7 +101,6 @@ const CharacterPage = ({ words, }: ICharacterPage) => {
               패션 컨셉 ({words.fashionConcept.length}개)
             </RollButton>
           </Box>
-          <GoogleAd />
           <Box mb={0}>
             <ResultBox>
               {word.map((item) => item)}
@@ -132,6 +135,9 @@ export const getStaticProps: GetStaticProps = async () => {
   );
   const weapons = getWordList('character', 'weapon');
   const fashionConcept = getWordList('character', 'fashion_concept');
+  const age = getWordList('character', 'age').concat(
+    Array(100).fill(0).map((item, index) => `${item + (index + 1)}세`)
+  );
 
   return {
     props: {
@@ -154,6 +160,7 @@ export const getStaticProps: GetStaticProps = async () => {
         whereFantasy,
         weapons,
         fashionConcept,
+        age,
       },
     },
   };

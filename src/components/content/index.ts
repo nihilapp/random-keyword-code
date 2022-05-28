@@ -10,4 +10,3 @@ export * from './AdminInput';
 export * from './AdminMessage';
 export * from './AdminBlockHeader';
 export * from './ColorBlock';
-export * from './GoogleAd';

@@ -1,6 +1,6 @@
 {
   "name": "random-keyword-code",
-  "version": "3.3.0",
+  "version": "3.4.0",
   "description": "랜덤 키워드 원본",
   "main": "index.js",
   "repository": {
@@ -26,31 +26,31 @@
   "dependencies": {
     "@emotion/react": "^11.9.0",
     "@emotion/styled": "^11.8.1",
-    "axios": "^0.26.1",
-    "next": "^12.1.5",
-    "react": "^18.0.0",
-    "react-dom": "^18.0.0",
+    "axios": "^0.27.2",
+    "next": "^12.1.6",
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0",
     "react-icons": "^4.3.1",
     "uuid": "^8.3.2"
   },
   "devDependencies": {
-    "@babel/core": "^7.17.9",
+    "@babel/core": "^7.18.2",
     "@emotion/babel-plugin": "^11.9.2",
     "@emotion/babel-preset-css-prop": "^11.2.0",
-    "@types/node": "^17.0.24",
-    "@types/react": "^18.0.5",
-    "@types/react-dom": "^18.0.0",
+    "@types/node": "^17.0.36",
+    "@types/react": "^18.0.9",
+    "@types/react-dom": "^18.0.5",
     "@types/uuid": "^8.3.4",
-    "@typescript-eslint/eslint-plugin": "^5.19.0",
-    "@typescript-eslint/parser": "^5.19.0",
-    "eslint": "^8.13.0",
+    "@typescript-eslint/eslint-plugin": "^5.26.0",
+    "@typescript-eslint/parser": "^5.26.0",
+    "eslint": "^8.16.0",
     "eslint-config-airbnb": "^19.0.4",
-    "eslint-config-next": "^12.1.5",
+    "eslint-config-next": "^12.1.6",
     "eslint-plugin-html": "^6.2.0",
     "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-jsx-a11y": "^6.5.1",
-    "eslint-plugin-react": "^7.29.4",
-    "eslint-plugin-react-hooks": "^4.4.0",
-    "typescript": "^4.6.3"
+    "eslint-plugin-react": "^7.30.0",
+    "eslint-plugin-react-hooks": "^4.5.0",
+    "typescript": "^4.7.2"
   }
 }

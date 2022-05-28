@@ -3,7 +3,7 @@ import { css } from '@emotion/react';
 import { v4 as uuid } from 'uuid';
 import { useSiteMeta } from '@/hooks';
 import AppLayout from '@/layouts/AppLayout';
-import { Box, GoogleAd, ResultBox } from '@/components/content';
+import { Box, ResultBox } from '@/components/content';
 import { ColorRollButton } from '@/components/content/RollButton';
 
 const ColorPage = () => {
@@ -47,7 +47,6 @@ const ColorPage = () => {
               랜덤 색상 5개
             </ColorRollButton>
           </Box>
-          <GoogleAd />
           <Box mb={0}>
             <ResultBox>
               {word.map((item) => item)}
